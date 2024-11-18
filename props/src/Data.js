@@ -1,5 +1,5 @@
 // data.js
-const students = [
+export default students = [
     {
       id: 1,
       name: "John Doe",
@@ -22,6 +22,4 @@ const students = [
       profilePicture: "https://via.placeholder.com/150",
     },
   ];
-  
-  export default students;
   
