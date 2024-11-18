@@ -5,23 +5,7 @@
 ### What is a Library?
 - A library is a collection of pre-written code that developers can use to optimize tasks, solve problems, or add specific functionality without writing code from scratch.
 - Libraries typically offer focused functionality and allow developers to control the application’s structure and flow.
-- **Examples**: 
-  - **jQuery**: DOM manipulation.
-  - **D3.js**: Data visualization.
-  - **Lodash**: Utility functions.
 
-### What is a Framework?
-- A framework provides a comprehensive structure for building applications. It defines architecture and enforces a specific approach to development, guiding the flow of the application.
-- Frameworks often come with a strict set of rules and conventions and control the application’s flow and lifecycle.
-- **Examples**: 
-  - **Angular**
-  - **Vue.js**
-  - **Django** (Python)
-  - **Ruby on Rails**
-
-### Use Cases of Libraries and Frameworks
-- **Libraries**: Great for adding modular functionalities in specific areas without changing the overall application structure. Example: Using **D3.js** for data visualizations in an analytics app.
-- **Frameworks**: Ideal for building a fully structured application with a consistent flow. Example: Using **Angular** for an enterprise-grade dashboard.
 
 ### React: Library or Framework?
 - React is a **JavaScript library** for building user interfaces, especially single-page applications (SPAs).
@@ -43,9 +27,6 @@ React, created and maintained by **Meta** (Facebook), is a powerful and widely u
 ## 3. React’s Ecosystem and Tools
 React benefits from an extensive ecosystem of tools and libraries that enhance its core functionalities. Some essential tools include:
 
-### 1. Create React App (CRA)
-- A CLI tool for setting up a React project with minimal configuration.
-- Comes with tools like **Webpack** and **Babel**, enabling developers to focus on coding rather than setup.
 
 ### 2. React Developer Tools
 - A browser extension to inspect React component hierarchies, check props, and monitor state changes.
@@ -77,11 +58,6 @@ React benefits from an extensive ecosystem of tools and libraries that enhance i
 - **State** is a data structure that holds information about a component and can change over time.
 - When the state changes, React re-renders the component to reflect the new data.
 
-### 4. Lifecycle Methods (Class Components Only)
-- React provides lifecycle methods that are called at specific points in a component’s lifecycle (e.g., `componentDidMount`, `componentDidUpdate`).
-- Functional components use **React hooks** (like `useEffect`) for similar functionality.
-
----
 
 ## 5. React’s Supporting Libraries
 
