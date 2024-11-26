@@ -1,6 +1,12 @@
 #root {
   background-color: bisque;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  display: center;
+}
+#counter{
+  background-color: #3333;
+  display:flex;
+}
+#Footer{
+  text-align:end;
 }

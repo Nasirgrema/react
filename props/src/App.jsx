@@ -1,11 +1,23 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './App.css'
-import Profile from "./components/Profile"
+import Home from "./pages/home"
+import About from "./pages/about"
+import Contact from "./pages/Contact"
+import Learning from "./pages/Learning"
+import Layout from "./components/layout"
 function App() {
   return (
    <div className='App'>
-<Profile name = 'muhammad nasir' course= 'computer science'level = '200L' />
-<Profile name = "khadija" course= "computer science" level = "300L"/>
-<Profile name = "Aramma" course= "computer science" level = "400L"/>
+     <BrowserRouter>
+     <Layout>
+      <Routes>
+      <Route path= "/" element ={<Home/>}/>
+      <Route path="/About" element={<About/>}/>
+      <Route path="/Contact" element={<Contact/>}/>
+      <Route path="/Learning" element={<Learning/>}/>
+      </Routes>
+     </Layout>
+     </BrowserRouter>
    </div>
   )
 }

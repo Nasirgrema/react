@@ -6,7 +6,7 @@ function Counter(){
         setCount(count + 1);
     }
     return(
-        <div>
+        <div id="counter">
             <center>
                 <h1>{count}</h1>
                 <button onClick={increment}>increment</button>
