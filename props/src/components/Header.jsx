@@ -5,16 +5,16 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to ="/">myHome</Link>
+            <Link to ="/">Home</Link>
           </li>
           <li>
-            <Link to="/services">Learning</Link>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to="/about">About us</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/contact">Contact us</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>

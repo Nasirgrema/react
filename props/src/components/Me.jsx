@@ -1,7 +1,7 @@
 const user = {
     name:"Aramma",
     level:"300L",
-    imageUrl: '../public/programmer.jpg',
+    imageUrl: '/programmer.jpg',
     id: 3
   };
   function Me(){
