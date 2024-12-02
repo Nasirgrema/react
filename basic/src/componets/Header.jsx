@@ -1,19 +1,21 @@
+import { Link as Tkb } from 'react-router-dom';
+
 function Header() {
   return (
     <header>
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Tkb to="/">Home</Tkb>
           </li>
           <li>
-            <a href="/services">Services</a>
+            <Tkb to="/services">Services</Tkb>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Tkb to="/about">About</Tkb>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Tkb to="/contact">Contact</Tkb>
           </li>
         </ul>
       </nav>

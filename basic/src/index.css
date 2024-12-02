@@ -18,3 +18,9 @@ ul{
   width: 100vw;
   height: 80vh;
 }
+.values{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
