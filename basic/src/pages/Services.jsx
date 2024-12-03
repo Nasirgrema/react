@@ -1,7 +1,9 @@
+import GithubUser from '../componets/GithubUser';
+
 function Services() {
   return (
     <div>
-      <h1>Services</h1>
+     <GithubUser />
     </div>
   );
 }
