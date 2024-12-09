@@ -1,40 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
-
-const GithubUser = () => {
+const GithubFinder = () => {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const fetchUser = () => {
+  useEffect(() => {
     if (!username) {
-      setError("Please enter a GitHub username.");
+      setUser(null);
+      setError("");
       return;
     }
-    setError("");
-    setLoading(true);
 
-    fetch(`https://api.github.com/users/${username}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("User not found");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        const { login, avatar_url,  html_url } = data;
-       
+    const fetchUser = async () => {
+      setLoading(true);
+      setError("");
+
+      try {
+        const response = await axios.get(`https://api.github.com/users/${username}`);
+        const { login, avatar_url, html_url } = response.data;
+
         setUser({ login, avatar_url, html_url });
         setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
+      } catch (err) {
+        setError(err.response?.status === 404 ? "User not found" : "An error occurred");
         setUser(null);
-      });
-  };
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, [username]);
 
   return (
     <div className="user-profile-container">
@@ -47,9 +46,6 @@ const GithubUser = () => {
           onChange={(e) => setUsername(e.target.value)}
           className="search-input"
         />
-        <button onClick={fetchUser} className="search-button">
-          Search
-        </button>
       </div>
       {loading && <p className="loading">Loading...</p>}
       {error && <p className="error">{error}</p>}
@@ -57,7 +53,6 @@ const GithubUser = () => {
         <div className="user-card">
           <img src={user.avatar_url} alt={user.login} className="avatar" />
           <h2>{user.login}</h2>
-      
           <p>
             <strong>GitHub Profile:</strong>{" "}
             <Link to={user.html_url} target="_blank">
@@ -70,4 +65,4 @@ const GithubUser = () => {
   );
 };
 
-export default GithubUser;
+export default GithubFinder;
